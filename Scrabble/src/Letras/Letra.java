@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package scrabble_practica1;
+package Letras;
 
 /**
  *
  * @author Cristina
  */
-public class Scrabble_Practica1 {
+public class Letra {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public String letra;
+    public int cantidad;
+
+    public Letra(String letra, int cantidad) {
+        this.letra = letra;
+        this.cantidad = cantidad;
     }
-    
 }
