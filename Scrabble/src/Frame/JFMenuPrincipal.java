@@ -5,6 +5,7 @@
  */
 package Frame;
 
+import Graficas.Graficador;
 import Graficas.XMLParser;
 import LSpalabras.LSPalabras;
 import java.io.File;
@@ -21,7 +22,7 @@ import javax.xml.parsers.SAXParserFactory;
 
 /**
  *
- * @author Cristina
+ * @author ana_j
  */
 public class JFMenuPrincipal extends javax.swing.JFrame {
 
@@ -40,15 +41,15 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         /**
          * ******** Cambiar la imagen del icono *********
          */
-      /*  URL url = getClass().getResource("/Imagenes/icon.jpg");
+        URL url = getClass().getResource("/Imagenes/icon.jpg");
         ImageIcon img = new ImageIcon(url);
-        setIconImage(img.getImage());  */
+        setIconImage(img.getImage());
 
         /**
          * ******** Colocar una imagen de fondo *********
          */
         ((JPanel) getContentPane()).setOpaque(false);
-        ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/fondo1.png"));
+        ImageIcon uno = new ImageIcon(this.getClass().getResource("/Imagenes/fondo.jpg"));
         JLabel fondo = new JLabel();
         fondo.setIcon(uno);
         getLayeredPane().add(fondo, JLayeredPane.FRAME_CONTENT_LAYER);
@@ -72,19 +73,17 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(204, 153, 255));
 
         btnLeer.setBackground(new java.awt.Color(255, 204, 204));
-        btnLeer.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnLeer.setForeground(new java.awt.Color(204, 0, 153));
-        btnLeer.setText("Cargar Archivo");
+        btnLeer.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        btnLeer.setText("LEER ARCHIVO");
         btnLeer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLeerActionPerformed(evt);
             }
         });
 
-        btnJugar.setBackground(new java.awt.Color(255, 51, 153));
-        btnJugar.setFont(new java.awt.Font("Comic Sans MS", 1, 18)); // NOI18N
-        btnJugar.setForeground(new java.awt.Color(255, 0, 153));
-        btnJugar.setText("Jugar");
+        btnJugar.setBackground(new java.awt.Color(255, 204, 204));
+        btnJugar.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        btnJugar.setText("JUGAR");
         btnJugar.setEnabled(false);
         btnJugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,20 +96,20 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(93, 93, 93)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnLeer, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)
-                    .addComponent(btnJugar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addGap(174, 174, 174)
+                .addComponent(btnLeer)
+                .addGap(111, 111, 111)
+                .addComponent(btnJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(174, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(btnLeer)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnJugar)
-                .addContainerGap(178, Short.MAX_VALUE))
+                .addGap(117, 117, 117)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnLeer, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnJugar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
         pack();

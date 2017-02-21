@@ -5,8 +5,8 @@
  */
 package Frame;
 
-import JFTablero.Ficha;
-import JFTablero.MTablero;
+import MatrizOTablero.Ficha;
+import MatrizOTablero.MTablero;
 import Graficas.XMLParser;
 import java.awt.Color;
 import java.net.URL;
@@ -19,7 +19,7 @@ import javax.swing.border.LineBorder;
 
 /**
  *
- * @author Cristina
+ * @author ana_j
  */
 public class JFTablero extends javax.swing.JFrame {
 
